@@ -25,8 +25,9 @@ public class King extends ChessPiece{
 
         for (int findLine = 0; findLine <= 7; findLine++) {
             for (int findColumn = 0; findColumn <= 7; findColumn++) {
-                if (chessBoard.board[findLine][findColumn] != null && !chessBoard.board[findLine][findColumn].getColor().equals(this.color) &&
-                    chessBoard.board[findLine][findColumn].canMoveToPosition(chessBoard, findLine, findColumn, line, column)) {
+                if (chessBoard.board[findLine][findColumn] != null &&
+                        !chessBoard.board[findLine][findColumn].getColor().equals(this.color) &&
+                        chessBoard.board[findLine][findColumn].canMoveToPosition(chessBoard, findLine, findColumn, line, column)) {
                     return true;
                 }
             }

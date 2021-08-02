@@ -12,7 +12,9 @@ public class Horse extends ChessPiece{
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
         if (chessBoard.checkPos(toLine) && chessBoard.checkPos(toColumn)) {
-            if (chessBoard.board[toLine][toColumn] != null && chessBoard.board[toLine][toColumn].getColor().equals(this.color))
+
+            if (chessBoard.board[toLine][toColumn] != null &&
+                    chessBoard.board[toLine][toColumn].getColor().equals(this.color))
                 return false;
             int offsetY = Math.abs(line - toLine);
             int offsetX = Math.abs(column - toColumn);

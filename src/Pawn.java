@@ -20,7 +20,8 @@ public class Pawn extends ChessPiece{
                 return true;
 
             //for move
-            if (chessBoard.board[toLine][toColumn] == null && offsetY != 0 && Math.abs(offsetY) <= 2 && toColumn == column) {
+            if (chessBoard.board[toLine][toColumn] == null && offsetY != 0 &&
+                Math.abs(offsetY) <= 2 &&toColumn == column) {
 
                 if (getColor().equals("White") && offsetY > 0) {
                     return offsetY == 1 || line == 1;
